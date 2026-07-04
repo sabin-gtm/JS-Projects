@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(87, 48, 124, 0.5);
+}
+
+main {
+  background-image: url(Images/background.png);
+  height: calc(90vw * 0.5);
+  width: 90vw;
+  background-size: cover;
+  border: 10px solid rgb(70, 10, 70);
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.content {
+  display: flex;
+  width: calc(3 * 90vw);
+  height: 90%; 
+}
+
+.page{
+  width: calc(90vw - 20px);
+  height: 100%;
+  background-image: linear-gradient(to right,rgba(255, 0, 0, 0.5),rgba(0, 0, 255, 0.39));
+  border: 2px solid red;
+}
+
+.bus_containeer {
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  bottom: 4%;
+  left: calc(50% - 10vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bus {
+  height: auto;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bus img {
+  width: 100%;
+  height: auto;
+}
+
+.suspension {
+  animation: suspension 1s linear infinite;
+}
+
+@keyframes suspension {
+  100% {
+    transform: translateY(3px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translate(2px);
+  }
+  70% {
+    transform: translateY(-1px);
+  }
+  60% {
+    transform: translate(1px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translate(1px);
+  }
+  30% {
+    transform: translateY(-1px);
+  }
+  20% {
+    transform: translate(2px);
+  }
+  10% {
+    transform: translateY(-2px);
+  }
+  0% {
+    transform: translateY(3px);
+  }
+}
+
+.land {
+  background-image: url(Images/land.png);
+  background-repeat: repeat-x;
+  width: 4000px;
+  height: 200px;
+  position: absolute;
+  bottom: -10%;
+  z-index: 0;
+}
+
+.moveRight {
+  animation: moveRight 5s linear infinite;
+}
+
+.moveLeft {
+  animation: moveLeft 5s linear infinite;
+}
+
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-2500px);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-2500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.buttons{
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.btn1,.btn2 {
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: large;
+}
